@@ -1,0 +1,143 @@
+{
+  "topic": "python",
+  "timestamp": "2025-05-15T20:04:18.098017",
+  "stats": {
+    "total_resources": 14,
+    "sources": 1
+  },
+  "resources": {
+    "research_papers": [
+      {
+        "title": "Machine Learning using Stata/Python",
+        "url": "http://arxiv.org/abs/2103.03122v1",
+        "authors": [
+          "Giovanni Cerulli"
+        ],
+        "published": "2021-03-03 10:31:44+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Egglog Python: A Pythonic Library for E-graphs",
+        "url": "http://arxiv.org/abs/2305.04311v2",
+        "authors": [
+          "Saul Shanabrook"
+        ],
+        "published": "2023-05-07 15:35:17+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "OpenML-Python: an extensible Python API for OpenML",
+        "url": "http://arxiv.org/abs/1911.02490v2",
+        "authors": [
+          "Matthias Feurer",
+          "Jan N. van Rijn",
+          "Arlind Kadra",
+          "Pieter Gijsbers",
+          "Neeratyoy Mallik",
+          "Sahithya Ravi",
+          "Andreas Müller",
+          "Joaquin Vanschoren",
+          "Frank Hutter"
+        ],
+        "published": "2019-11-06 16:59:30+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "A general approach for running Python codes in OpenFOAM using an embedded pybind11 Python interpreter",
+        "url": "http://arxiv.org/abs/2203.16394v1",
+        "authors": [
+          "Simon Rodriguez",
+          "Philip Cardiff"
+        ],
+        "published": "2022-03-30 15:25:03+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Towards Memory Safe Python Enclave for Security Sensitive Computation",
+        "url": "http://arxiv.org/abs/2005.05996v1",
+        "authors": [
+          "Huibo Wang",
+          "Mingshen Sun",
+          "Qian Feng",
+          "Pei Wang",
+          "Tongxin Li",
+          "Yu Ding"
+        ],
+        "published": "2020-05-12 18:19:08+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "A Framework for Distributed Deep Learning Layer Design in Python",
+        "url": "http://arxiv.org/abs/1510.07303v1",
+        "authors": [
+          "Clay McLeod"
+        ],
+        "published": "2015-10-25 21:04:12+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Using Python for Model Inference in Deep Learning",
+        "url": "http://arxiv.org/abs/2104.00254v1",
+        "authors": [
+          "Zachary DeVito",
+          "Jason Ansel",
+          "Will Constable",
+          "Michael Suo",
+          "Ailing Zhang",
+          "Kim Hazelwood"
+        ],
+        "published": "2021-04-01 04:48:52+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "TensorFlow Eager: A Multi-Stage, Python-Embedded DSL for Machine Learning",
+        "url": "https://paperswithcode.com/paper/tensorflow-eager-a-multi-stage-python",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      },
+      {
+        "title": "Scikit-learn: Machine Learning in Python",
+        "url": "https://paperswithcode.com/paper/scikit-learn-machine-learning-in-python",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      },
+      {
+        "title": "PythonRobotics: a Python code collection of robotics algorithms",
+        "url": "https://paperswithcode.com/paper/pythonrobotics-a-python-code-collection-of",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      },
+      {
+        "title": "Theano: A Python framework for fast computation of mathematical expressions",
+        "url": "https://paperswithcode.com/paper/theano-a-python-framework-for-fast",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      },
+      {
+        "title": "Triangulating Python Performance Issues with Scalene",
+        "url": "https://paperswithcode.com/paper/triangulating-python-performance-issues-with",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      },
+      {
+        "title": "SciPy 1.0--Fundamental Algorithms for Scientific Computing in Python",
+        "url": "https://paperswithcode.com/paper/scipy-1-0-fundamental-algorithms-for",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      },
+      {
+        "title": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
+        "url": "https://paperswithcode.com/paper/pyod-2-a-python-library-for-outlier-detection",
+        "source": "PapersWithCode",
+        "type": "paper_with_code"
+      }
+    ]
+  }
+}

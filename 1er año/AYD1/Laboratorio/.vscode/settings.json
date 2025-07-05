@@ -1,0 +1,24 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "stdbool.h": "c",
+        "stdio.h": "c",
+        "random": "c",
+        "sstream": "c",
+        "algorithm": "c",
+        "assert.h": "c",
+        "absoluto.C": "cpp",
+        "limits.h": "c",
+        "arreglos.h": "c",
+        "cstdlib": "c",
+        "limits": "c",
+        "compare": "c",
+        "numeric": "c",
+        "array": "c",
+        "type_traits": "c",
+        "atomic": "cpp",
+        "memory": "cpp",
+        "optional": "cpp",
+        "functional": "cpp"
+    }
+}

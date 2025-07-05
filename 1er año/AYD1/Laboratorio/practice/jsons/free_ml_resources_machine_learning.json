@@ -1,0 +1,64 @@
+{
+  "topic": "machine learning",
+  "timestamp": "2025-05-20T08:56:47.234919",
+  "stats": {
+    "total_resources": 5,
+    "sources": 1
+  },
+  "resources": {
+    "arxiv_papers": [
+      {
+        "title": "Lecture Notes: Optimization for Machine Learning",
+        "url": "http://arxiv.org/abs/1909.03550v1",
+        "authors": [
+          "Elad Hazan"
+        ],
+        "published": "2019-09-08 21:49:42+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "An Optimal Control View of Adversarial Machine Learning",
+        "url": "http://arxiv.org/abs/1811.04422v1",
+        "authors": [
+          "Xiaojin Zhu"
+        ],
+        "published": "2018-11-11 14:28:34+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Minimax deviation strategies for machine learning and recognition with short learning samples",
+        "url": "http://arxiv.org/abs/1707.04849v1",
+        "authors": [
+          "Michail Schlesinger",
+          "Evgeniy Vodolazskiy"
+        ],
+        "published": "2017-07-16 09:15:08+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Machine Learning for Clinical Predictive Analytics",
+        "url": "http://arxiv.org/abs/1909.09246v1",
+        "authors": [
+          "Wei-Hung Weng"
+        ],
+        "published": "2019-09-19 22:02:00+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Towards Modular Machine Learning Solution Development: Benefits and Trade-offs",
+        "url": "http://arxiv.org/abs/2301.09753v1",
+        "authors": [
+          "Samiyuru Menik",
+          "Lakshmish Ramaswamy"
+        ],
+        "published": "2023-01-23 22:54:34+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      }
+    ]
+  }
+}

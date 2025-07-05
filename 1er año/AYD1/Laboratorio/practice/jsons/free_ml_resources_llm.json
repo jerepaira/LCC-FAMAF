@@ -1,0 +1,75 @@
+{
+  "topic": "llm",
+  "timestamp": "2025-05-15T20:07:34.276166",
+  "stats": {
+    "total_resources": 5,
+    "sources": 1
+  },
+  "resources": {
+    "arxiv_papers": [
+      {
+        "title": "LLM Online Spatial-temporal Signal Reconstruction Under Noise",
+        "url": "http://arxiv.org/abs/2411.15764v1",
+        "authors": [
+          "Yi Yan",
+          "Dayu Qin",
+          "Ercan Engin Kuruoglu"
+        ],
+        "published": "2024-11-24 09:24:04+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Large Language Models as Software Components: A Taxonomy for LLM-Integrated Applications",
+        "url": "http://arxiv.org/abs/2406.10300v1",
+        "authors": [
+          "Irene Weber"
+        ],
+        "published": "2024-06-13 21:32:56+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Conditioning LLMs with Emotion in Neural Machine Translation",
+        "url": "http://arxiv.org/abs/2408.03150v1",
+        "authors": [
+          "Charles Brazier",
+          "Jean-Luc Rouas"
+        ],
+        "published": "2024-08-06 12:49:33+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
+        "url": "http://arxiv.org/abs/2405.19888v1",
+        "authors": [
+          "Chaofan Lin",
+          "Zhenhua Han",
+          "Chengruidong Zhang",
+          "Yuqing Yang",
+          "Fan Yang",
+          "Chen Chen",
+          "Lili Qiu"
+        ],
+        "published": "2024-05-30 09:46:36+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      },
+      {
+        "title": "Rethinking Learning Rate Tuning in the Era of Large Language Models",
+        "url": "http://arxiv.org/abs/2309.08859v1",
+        "authors": [
+          "Hongpeng Jin",
+          "Wenqi Wei",
+          "Xuyu Wang",
+          "Wenbin Zhang",
+          "Yanzhao Wu"
+        ],
+        "published": "2023-09-16 03:37:00+00:00",
+        "source": "arXiv",
+        "type": "research_paper"
+      }
+    ]
+  }
+}
