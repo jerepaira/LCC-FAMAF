@@ -42,3 +42,4 @@ igualRodado _ _ = False
 
 -- Ejercicio 1)c)
 
+    

@@ -12,7 +12,7 @@ void imprimir_entero(int num) {
 int main(void) {
 
     int x,y,z,xaux,yaux,zaux;
-
+ 
     printf("ingrese un valor para x: \n");
     scanf("%d",&x);
 

@@ -125,4 +125,4 @@ hay_organica_de_5kg (AgregarPaquete paquete resto) = es_organica_5kg paquete   |
 
 -- Ejercicio 3
 
-vender_cantidad :: [Paquete] -> TipoYerba -> Int -> Maybe [Paquete]
+-- vender_cantidad :: [Paquete] -> TipoYerba -> Int -> Maybe [Paquete]

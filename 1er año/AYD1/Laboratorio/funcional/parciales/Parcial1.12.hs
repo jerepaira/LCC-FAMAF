@@ -94,5 +94,5 @@ deuda_total (Cobro dni cantidad resto) dni1 | dni == dni1  = cantidad + deuda_to
 
 socios_deudores :: Padron -> Int -> [Nombre]
 socios_deudores []  _ = []
-socios_deudores ((Socio nombre _ _ deuda): resto) monto | deuda >= monto = nombre : socios_deudores resto monto
+socios_deudores ((Socio nombre _ _ deuda): resto) monto | deuda >= monto = nombre : socios_deudores      monto
                                                         | otherwise = socios_deudores resto monto

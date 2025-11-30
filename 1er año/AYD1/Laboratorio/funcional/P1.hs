@@ -159,7 +159,7 @@ duplica' (x : xs) = map (2 *) xs
 
 -- ejercicio 9a)
 elementosPrimos :: [Int] -> [Int]
-elementosPrimos [] = []
+elementosPrimos [] = [] 
 elementosPrimos (x : xs)
   | esPrimo x = x : elementosPrimos xs
   | otherwise = elementosPrimos xs

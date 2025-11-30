@@ -114,13 +114,14 @@ int main(void) {
         printf("la cantidad de 'x': %d\n",resultado_final.cuantas_x);
          
     }
+    
      if (resultado_final.cuantas_z) {
         printf("la cantidad de 'a': %d\n",resultado_final.cuantas_z);
     }
     if (!resultado_final.cuantas_a && !resultado_final.cuantas_x && !resultado_final.cuantas_z) {
-    printf("No hay ni 'a', ni 'x', ni 'z' en el arreglo.\n");
+    printf("No hay ni 'a', ni 'x', ni 'z' en el arreglo.\n");       
 }
 
-
+        
     return 0;
 }
