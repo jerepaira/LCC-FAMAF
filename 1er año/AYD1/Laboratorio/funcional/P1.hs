@@ -37,7 +37,7 @@ paraTodo (x : xs) = x && paraTodo xs
 sumatoria :: [Int] -> Int
 sumatoria [] = 0
 sumatoria (x : xs) = x + sumatoria xs
-
+s
 -- ejercicios 2c)
 productoria :: [Int] -> Int
 productoria [] = 1
