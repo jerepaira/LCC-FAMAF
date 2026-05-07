@@ -11,7 +11,7 @@
 static unsigned int partition(int a[], unsigned int izq, unsigned int der) {
 
     unsigned int ppiv = izq;
-    unsigned int  i = izq +1;
+    unsigned int  i = izq+1;
     unsigned int j = der;
 
     while (i<=j) {
