@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "array_helpers.h"
+#include "bakery_product.h"
 
 static const int EXPECTED_DIM_VALUE = 2;
 
@@ -34,6 +35,23 @@ unsigned int best_profit(BakeryProductTable a)
 {
     unsigned int max_profit = 0u;
     //COMPLETAR
+    for (unsigned int city=0u;city<CITIES;city++) {
+        for (unsigned int season= 0u; season<SEASONS;season++) {
+            BakeryProduct p = a[city][season];
+            unsigned int cost = (p.flour_cant*p.flour_price)+(p.yeast_cant*p.yeast_price) + (p.butter_cant*p.butter_price);
+            unsigned int profit = 0;
+            if (p.sale_value>=cost) {
+                profit=p.sale_value-cost;
+            }else {
+                printf("estas en perdida pa\n");
+                // exit(EXIT_FAILURE);
+            }
+            if (profit>max_profit) {
+                max_profit=profit;
+            }
+        }
+    }
+
     return max_profit;
 }
 
@@ -48,14 +66,23 @@ void array_from_file(BakeryProductTable array, const char* filepath)
         exit(EXIT_FAILURE);
     }
     int i = 0;
-    while (/* COMPLETAR*/)
+    while (!feof(file)/* COMPLETAR*/)
     {
         /* COMPLETAR**/
-        if (res != EXPECTED_DIM_VALUE)
-        {
+        unsigned int city,season;
+        int res = fscanf(file, "##%u??%u", &city,&season);
+
+        if (res != EXPECTED_DIM_VALUE) {
             fprintf(stderr, "Invalid file.\n");
             exit(EXIT_FAILURE);
-        }
+            }
+        if (city >= CITIES || season >= SEASONS) {
+                fprintf(stderr, "Invalid city or season.\n");
+                exit(EXIT_FAILURE);
+            }
+
+
+        array[city][season] = bakery_product_from_file(file);
         /* COMPLETAR: Leer y guardar product en el array multidimensional*/
         /* Agregar las validaciones que considere necesarias*/
         /* Completar*/

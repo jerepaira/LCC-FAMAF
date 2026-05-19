@@ -1,0 +1,227 @@
+## INSTRUCCIONES DE OPERACION ARITMETICA Y LOGICA
+
+ADD (Addition): Realiza una suma de dos registros y guarda el resultado en un registro de destino. 
+Ejemplo:
+ -      ADD X0, X1, X2  ; X0 = X1 + X2
+
+SUB (Subtraction): Realiza una resta de dos registros y guarda el resultado en un registro de destino. 
+Ejemplo:
+ -      SUB X3, X4, X5  ; X3 = X4 - X5
+
+MUL (Multiplication): Realiza una multiplicación de dos registros y guarda el resultado en un registro de destino. 
+Ejemplo:
+
+    MUL X6, X7, X8  ; X6 = X7 * X8
+
+AND (Bitwise AND): Realiza una operación lógica AND bit a bit entre dos registros y guarda el resultado en un registro de destino. 
+Ejemplo:
+
+    AND X9, X10, X11  ; X9 = X10 AND X11
+
+ORR (Bitwise OR): Realiza una operación lógica OR bit a bit entre dos registros y guarda el resultado en un registro de destino. 
+Ejemplo:
+
+    ORR X12, X13, X14  ; X12 = X13 OR X14
+
+LSL (Logical Shift Left): Desplaza los bits de un registro hacia la izquierda en una cantidad específica y guarda el resultado en un registro de destino.
+Ejemplo:
+
+    LSL X1, X2, #4  ; Desplaza los bits en el registro X2 hacia la izquierda 4 posiciones y guarda el resultado en el registro X1.
+
+
+LSR (Logical Shift Right): Desplaza los bits de un registro hacia la derecha en una cantidad específica y guarda el resultado en un registro de destino.
+Ejemplo:
+
+    LSL X1, X2, #4  ; Desplaza los bits en el registro X2 hacia la izquierda 4 posiciones y guarda el resultado en el registro X1.
+
+
+
+### INSTRUCCIONES DE CARGA
+
+LDR = (Load Register): Carga un valor de 64 bits desde la memoria en un registro. Puede usar direcciones de memoria directas o indiretas. 
+Por ejemplo:
+ -      LDR X0, [X1]  ; Carga el valor de 64 bits desde la dirección contenida en X1 en X0.
+
+LDRB (Load Register Byte): Carga un valor de 8 bits desde la memoria en un registro. Puede usar direcciones de memoria directas o indiretas. 
+Por ejemplo:
+ -      LDRB W2, [X3]  ; Carga el valor de 8 bits desde la dirección contenida en X3 en W2.
+
+LDUR : se utiliza para cargar un valor de 64 bits desde la memoria en un registro utilizando direcciones de memoria relativas. LDUR se utiliza cuando se requiere cargar un dato de 64 bits en un registro.
+Por ejemplo:
+ -      LDUR X0, [X1, #8]  ; Carga el valor de 64 bits desde la dirección X1 + 8 en el registro X0.
+
+LDURB :  se utiliza para cargar un valor de 8 bits desde la memoria en un registro utilizando direcciones de memoria relativas. LDURB se utiliza cuando se requiere cargar un byte de memoria en un registro, sin extenderlo a un valor de 64 bits.
+
+Por ejemplo:
+ -      LDURB W0, [X1, #4]  ; Carga el valor de 8 bits desde la dirección X1 + 4 en el registro W0.
+
+## INSTRUCCIONES DE ALMACENAMIENTO
+
+STR (Store Register): Almacena un valor de 64 bits desde un registro en la memoria. Puede usar direcciones de memoria directas o indiretas. 
+Por ejemplo:
+ -      STR X0, [X1]  ; Almacena el valor de 64 bits contenido en X0 en la dirección de memoria contenida en X1.
+
+STRB (Store Register Byte): Almacena un valor de 8 bits desde un registro en la memoria. Puede usar direcciones de memoria directas o indiretas. 
+Por ejemplo:
+ -      STRB W2, [X3]  ; Almacena el valor de 8 bits contenido en W2 en la dirección de memoria contenida en X3.
+
+STUR (Store Register Unprivileged): Almacena un valor de 64 bits desde un registro en la memoria en modo no privilegiado. Puede usar direcciones de memoria directas o indiretas. 
+Por ejemplo:
+
+ -      STUR X6, [X7]  ; Almacena el valor de 64 bits contenido en X6 en la dirección de memoria contenida en X7 en modo no privilegiado.
+
+STURB (Store Register Byte Unprivileged): Almacena un valor de 8 bits desde un registro en la memoria en modo no privilegiado. Puede usar direcciones de memoria directas o indiretas. 
+Por ejemplo:
+
+-       STURB W8, [X9]  ; Almacena el valor de 8 bits contenido en W8 en la dirección de memoria contenida en X9 en modo no privilegiado.
+
+## modo no privilegiado :
+En el contexto de ARM y LEGv8, el "modo no privilegiado" se refiere a un estado en el que el procesador se encuentra ejecutando instrucciones en un nivel de privilegio inferior. En el modo no privilegiado, el acceso a ciertas instrucciones y recursos del sistema está restringido para garantizar la seguridad y el control de privilegios.
+
+Cuando una instrucción de almacenamiento (store) se ejecuta en modo no privilegiado, significa que se está realizando la operación de almacenamiento de datos desde un registro a la memoria, pero sin los privilegios de acceso a ciertas áreas restringidas del sistema. Esto puede ser relevante en entornos donde existen diferentes niveles de privilegio y se desea limitar el acceso a ciertos recursos o funciones del procesador.
+
+En LEGv8, el modo no privilegiado se logra mediante el uso de modos de ejecución específicos, como el modo usuario o el modo de ejecución en el espacio de usuario. Estos modos tienen un nivel de privilegio inferior al modo privilegiado, que es donde se ejecutan instrucciones y operaciones que requieren permisos más altos.
+
+## INSTRUCCIONES DE COMPARACION
+
+CMP (Compare): Compara dos registros y actualiza los flags de condición en función del resultado de la comparación. No guarda el resultado de la comparación en un registro de destino. 
+Ejemplo:
+-       CMP X1, X2  ; Compara los valores en X1 y X2 y actualiza los flags de condición.
+
+CBZ (Compare and Branch on Zero): Compara el valor de un registro con cero y realiza un salto condicional si el registro es igual a cero. 
+Ejemplo:
+
+-       CBZ X1, Label  ; Compara el valor en X1 con cero. Si X1 es igual a cero, se realiza un salto a la etiqueta (Label).
+
+CBNZ (Compare and Branch on Non-Zero): Compara el valor de un registro con cero y realiza un salto condicional si el registro no es igual a cero. 
+Ejemplo:
+
+-       CBNZ X2, Label  ; Compara el valor en X2 con cero. Si X2 no es igual a cero, se realiza un salto a la etiqueta (Label).
+
+## INSTRUCCIONES QUE SETEAN FLAGS
+
+ADDIS = SUMA INMEDIATA Y SETEA FLAGS
+CMPS = COMPARA Y SETEA FLAGS
+SUBIS = RESTA INMEDIATA Y SETEA FLAGS
+ANDIS = AND INMEDIATO Y SETEA FLAGS
+ORIS = OR INMEDIATO Y SETEA FLAGS
+XORIS = XOR INMEDIATO Y SETEA FLAGS
+NOTS = NOT Y SETEA FLAGS
+EN GENERAL LAS OPERACIONES QUE TERMINAN CON S SETEAN FLAGS
+
+
+## INSTRUCCIONES DE SALTO
+
+B.GE = BRANCHEA SI ES MAYOR O IGUAL
+B.LT = BRANCHEA SI ES MENOR
+B.EQ = BRANCHEA SI ES IGUAL
+B.NE = BRANCHEA SI ES DIFERENTE
+B.GT = BRANCHEA SI ES MAYOR
+B.LE = BRANCHEA SI ES MENOR O IGUAL
+
+## COMO HACER UN BUCLE
+
+En general lo que hacemos si queremos realizar un bucle, es crear una sentencia aparte la cual definimos con : y luego la llamamos con B. y el nombre de la sentencia. Por ejemplo:
+
+```
+    MOV X0, #0
+    MOV X1, #0
+    MOV X2, #10
+    BUCLE:
+        ADD X0, X0, #1
+        ADD X1, X1, #2
+        CMP X0, X2
+        B.LT BUCLE
+```
+
+en este caso creamos una sentencia llamada BUCLE y luego la llamamos con B.LT BUCLE, esto quiere decir que si X0 es menor a X2, entonces se va a realizar un salto a la sentencia BUCLE, y se va a repetir el proceso hasta que X0 sea mayor o igual a X2.
+
+en codigo C seria algo similar a esto:
+
+```
+    int x0 = 0;
+    int x1 = 0;
+    int x2 = 10;
+    while(x0 < x2){
+        x0 = x0 + 1;
+        x1 = x1 + 2;
+    }
+```
+
+Hay que tener en cuenta ciertas condiciones a la hora de realizar un bucle, por ejemplo, si no se realiza un salto dentro del bucle, este se va a repetir infinitamente, por lo que hay que tener cuidado con eso.
+Ademas, a la hora de comparar la condicion necesaria para que se realice el bucle, es recomendable que la comparacion para salir del bucle se encuentre al principio del mismo, ya que puede pasar el caso en que si se encuentra al final, se va a realizar una iteracion mas de la necesaria, y nunca saldria del bucle.
+
+## ARREGLOS DE MEMORIA
+
+Pongamos de ejemplo el siguiente ejercicio en donde nos dan un codigo en C y debemos pasarlo a LEGv8.
+
+
+
+```
+   for (found =0, i = 0; i != N; i++)
+        found += (str[i] == 48);
+```
+
+Vamos a enfocarnos en el tema de str[i] == 48, ya que es lo que nos interesa para este ejemplo. En C, lo que hace es comparar el valor de la posicion i del arreglo str con el numero 48, y si son iguales, devuelve un 1, y si no, devuelve un 0. Por ende necesitamos acceder al arreglo de memoria en la posicion i, que es lo que nos interesa.
+Ahora veamos como podemos hacer esto.
+
+Primero necesitamos guardar el arreglo en un registro, para poder acceder a el. Para esto, supongamos que el arreglo se encuentra en el registro X0, y que la variable i se encuentra en el registro X2. Entonces, lo que debemos hacer es lo siguiente:
+
+```
+    ADD X3, X0, X2 // Lo que hacemos con esto es sumar el valor de X0 y X2, y guardarlo en X3. Esto nos va a dar la direccion de memoria del arreglo en la posicion i. osea str[i]. Esto se hace siempre que querramos a acceder a una posicion de memoria de un arreglo.
+```
+
+Ahora debemos almacenar el valor de la posicion i del arreglo en un registro.
+
+```
+    LDURB x4, [x3, #0] // Lo que hacemos con esto es guardar lo obtenido anteriormente en un registro, entonces tendremos que x4 = str[i]. 
+```
+
+Otro ejemplo: donde x10 = i, x1 = a, x2 = result, x0 = MemArray. 
+
+```
+            ADDI x10, xzr, #50
+    loop:   LDUR x1, [x0, #0] // x1 = MemArray[0]
+            ADD x2, x2, x1  // x2 = x2 + MemArray[0] = 
+            LDUR x1, [x0, #8] // x1 = MemArray[1]
+            ADD x2, x2, x1  // x2 = x2 + MemArray[1]
+            ADDI x0, x0, #16 // x0 = x0 + 16 = MemArray[2]
+            SUBI x10, x10, #1 // x10 = x10 - 1 = 49
+            CBNZ x10, loop  // Si x10 != 0, salta a loop
+```
+
+Lo que hace en la primera instruccion es cargar en x10 el valor 50, que es la cantidad de elementos que tiene el arreglo. Luego, en el bucle, lo que hace es cargar en x1 el valor de la posicion 0 del arreglo, y luego lo suma con el valor de x2, que es el resultado. Luego, carga en x1 el valor de la posicion 8 del arreglo, y lo suma con el valor de x2. Luego, suma 16 a x0, que es la direccion de memoria del arreglo, y resta 1 a x10, que es la cantidad de elementos que quedan por recorrer. Por ultimo, compara x10 con 0, y si no es igual a 0, realiza un salto al bucle, y si es igual a 0, termina el programa.
+
+
+## Configuracion LE little endian
+
+Cuando decimos que el microprocesador LEGv8 está configurado en "little-endian", estamos haciendo referencia a la forma en que se almacenan los bytes en la memoria de dicho microprocesador.
+
+En un sistema little-endian, los bytes menos significativos se almacenan en las direcciones de memoria más bajas, mientras que los bytes más significativos se almacenan en las direcciones de memoria más altas. Esto significa que cuando se almacena un dato multibyte (como un entero de 32 bits) en la memoria, el byte menos significativo se coloca en la dirección más baja, seguido del siguiente byte más significativo en la dirección siguiente, y así sucesivamente.
+
+------------------------------------------------------------------------------------------------------------------
+
+Imagina que tienes una palabra de cuatro letras: "HOLA". En la memoria del microprocesador, esta palabra se almacena como una secuencia de bytes. Ahora, en un sistema little-endian como LEGv8, los bytes se guardan de atrás hacia adelante. Es decir, la "A" se guarda primero, seguida de la "L", la "O" y finalmente la "H".
+
+Entonces, si representamos esta palabra en la memoria de un sistema little-endian, se vería así:
+```
+Dirección de memoria | Contenido
+0x1000               | 0x41   ; Byte correspondiente a la letra 'A'
+0x1001               | 0x4C   ; Byte correspondiente a la letra 'L'
+0x1002               | 0x4F   ; Byte correspondiente a la letra 'O'
+0x1003               | 0x48   ; Byte correspondiente a la letra 'H'
+
+```
+
+Como puedes ver, los bytes se almacenan de derecha a izquierda en la memoria.
+
+Esta configuración tiene implicaciones cuando trabajamos con datos multibyte, como números enteros. Los bytes que componen un número entero se almacenan en el orden inverso. Por ejemplo, el número entero de 32 bits "305419896" se representaría en la memoria de LEGv8 de la siguiente manera:
+```
+Dirección de memoria   | Contenido
+0x1000                 | 0x18   ; Byte menos significativo
+0x1001                 | 0x2D
+0x1002                 | 0x4E
+0x1003                 | 0x11   ; Byte más significativo
+
+```
+Es importante tener en cuenta esta configuración al leer o escribir datos en memoria, especialmente cuando interactuamos con otros sistemas o formatos de datos que pueden tener un orden de bytes diferente.

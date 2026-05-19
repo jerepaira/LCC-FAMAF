@@ -78,5 +78,9 @@ int main(int argc, char *argv[])
 
     /* show the data on the screen */
     array_dump(array);
+
+    /* show the best profit */
+    unsigned int max_gain = best_profit(array);
+    printf("Best profit: %u\n", max_gain);
     return (EXIT_SUCCESS);
 }
